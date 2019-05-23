@@ -54,17 +54,32 @@
                                 <color key="backgroundColor" red="1" green="0.032915566848032984" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="LeI-8W-sKQ"/>
-                                    <constraint firstAttribute="width" constant="150" id="Ud3-Ev-Wiz"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="Ud3-Ev-Wiz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Calculer">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="calculerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bxf-qR-70j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tbd-a0-Eti">
+                                <rect key="frame" x="320" y="723" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="GFO-RQ-XkW"/>
+                                    <constraint firstAttribute="height" constant="35" id="W3B-ei-gDJ"/>
+                                </constraints>
+                                <state key="normal" image="son"/>
+                                <connections>
+                                    <action selector="soundAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oft-o8-oxp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ASc-dQ-ybS" firstAttribute="top" secondItem="5gJ-a4-kMc" secondAttribute="bottom" constant="20" id="EOA-u4-fk2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tbd-a0-Eti" secondAttribute="trailing" constant="20" id="HCg-t4-cD9"/>
                             <constraint firstItem="mXz-SR-nSx" firstAttribute="top" secondItem="LRj-IL-CMi" secondAttribute="bottom" constant="10" id="MZt-b6-5sU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LRj-IL-CMi" secondAttribute="trailing" constant="20" id="Wel-36-uci"/>
                             <constraint firstItem="5gJ-a4-kMc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="X7h-IM-qNI"/>
@@ -73,6 +88,7 @@
                             <constraint firstItem="dFv-mD-7Q7" firstAttribute="top" secondItem="ASc-dQ-ybS" secondAttribute="bottom" constant="20" id="fJt-VE-FfP"/>
                             <constraint firstItem="mXz-SR-nSx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fzd-KS-60w"/>
                             <constraint firstItem="5gJ-a4-kMc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="iOj-3f-nyN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Tbd-a0-Eti" secondAttribute="bottom" constant="20" id="jJc-Om-Rjx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5gJ-a4-kMc" secondAttribute="trailing" constant="20" id="rgf-VG-s4s"/>
                             <constraint firstAttribute="bottom" secondItem="mXz-SR-nSx" secondAttribute="bottom" id="rm6-1r-6Hy"/>
                             <constraint firstItem="LRj-IL-CMi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rqS-7X-h2x"/>
@@ -82,6 +98,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="ageTextField" destination="ASc-dQ-ybS" id="f4z-pI-MYL"/>
+                        <outlet property="resultLabel" destination="LRj-IL-CMi" id="mnE-cb-6o4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -90,5 +110,6 @@
     </scenes>
     <resources>
         <image name="chat" width="6000" height="4000"/>
+        <image name="son" width="64" height="64"/>
     </resources>
 </document>
